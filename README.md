@@ -2,7 +2,8 @@
 
 <img src="https://github.com/pedroachagas/rossmann_webapp/blob/main/img/logo.png" width=70% height=70%/>
 
-### Contextualização:
+## Contextualização
+
 A Rossmann é uma das maiores redes de farmácias da Europa, possuindo mais de 4.000 lojas, e 56 mil colaboradores até 2020.
 
 Os dados utilizados neste projeto são reais, e foram disponibilizados pela própria Rossmanm através do site Kaggle, para uma competição de ciência de dados.
@@ -31,9 +32,9 @@ Em uma reunião mensal de resultados da Rossmann, o CFO solicitou aos gerentes d
 - A consulta da previsão de vendas estará disponível 24/7, e será acessível via dispositivos móveis.
 - O planejamento da solução será validado com os gerentes, visando garantir que o seu conhecimento de negócios seja aproveitado ao máximo.
 - Dias sem vendas não foram incluídos
-- Para lojas sem informações sobre a distância do competidor mais próximo, foi adotada a maior distância registrada no conjunto de dados. 
+- Para lojas sem informações sobre a distância do competidor mais próximo, foi adotada a maior distância registrada no conjunto de dados.
 
-### As variáveis do dataset original são:
+### As variáveis do dataset original são
 
 Variável | Definição
 ------------ | -------------
@@ -91,7 +92,7 @@ Quais ferramentas serão usadas no processo?
 
 #### 3.3.1 Estratégia de solução
 
-<img src="https://github.com/pedroachagas/rossmann_webapp/blob/main/img/crisp.png" width=70% height=70%/>
+<img src="https://github.com/pedroachagas/rossmann_webapp/blob/main/img/crisp.png" width=100% height=100%/>
 
 A estratégia utilizada na resolução do problema, baseada:
 
@@ -115,46 +116,40 @@ A estratégia utilizada na resolução do problema, baseada:
 
 **Passo 10 -** Apresentar e disponibilizar o bot do Telegram aos gerentes e CFO, detalhando o funcionamento do modelo e esclarecendo as suas dúvidas.
 
-------
-
 ## 4. Os 3 principais insights dos dados
 
 Durante a análise exploratória de dados, foram gerados insights ao time de negócio.
 
 Insights são informações novas, ou que contrapõe crenças até então estabelecidas do time de negócios. São também acionáveis: possibilitam ação para direcionar resultados futuros.
 
-#### Lojas com promoções ativas por mais tempo vendem menos
+### Lojas com promoções ativas por mais tempo vendem menos
 
 - Ação sugerida: Descontinuar as promoções ativas por tempo estendido, visto que constatou-se queda nas vendas após o período promocional normal.
 
-#### Lojas vendem menos durante os feriados escolares, exceto nos meses de agosto
+### Lojas vendem menos durante os feriados escolares, exceto nos meses de agosto
 
 - Ação sugerida: Considerar esta particularidade do mês de agosto na elaboração de promoções envolvendo clientes em faixas etárias escolares.
 
-#### Lojas vendem menos no segundo semestre do ano
+### Lojas vendem menos no segundo semestre do ano
 
 - Ação sugerida: Considerar o declínio sazonal histórico de vendas entre os meses de agosto a novembro, compensando este fenômeno como ações de marketing.  
 
-------
 ## 5. Escolha e resultados do modelo
 
 Durante o desenvolvimento do projeto foram testados 4 modelos de machine learning através de uma estratégia de Time-Series Cross-Validation, com 6 folds. Seus desempenhos foram avaliados pelas métricas MAE, MAPE e RMSE
 
-|     Modelo         |           MAE           |          MAPE          |        RMSE         |   
+|     Modelo         |           MAE           |          MAPE          |        RMSE         |
 |--------------------|-------------------------|------------------------|---------------------|
 |  Linear Regression |    2055.56 +/- 323.74   |      0.29 +/- 0.01     |  2921.75 +/- 489.18 |
 |  Lasso Regression    |    2070.72 +/- 337.78   |      0.29 +/- 0.01     |  2964.9 +/- 499.26  |  
 |  Random Forest Regressor   |    854.23 +/- 230.73    |      0.12 +/- 0.03     |  1294.43 +/- 355.29 |
 |  XGBoost Regressor |    863.12 +/- 135.32    |      0.12 +/- 0.01     |  1276.11 +/- 210.31 |
 
-
 Apesar do Random Forest ter tido um desempenho ligeiramente superior, o modelo escolhido foi o XGBoost Regressor por requerer muito menos espaço de memória. Além disso, após a etapa de Fine Tuning dos hiperâmetros do modelo, foi possível melhorar seu desempenho.
 
-|    Modelo (Tuned)  |       MAE        |       MAPE         |     RMSE     | 
+|    Modelo (Tuned)  |       MAE        |       MAPE         |     RMSE     |
 |--------------------|------------------|--------------------|--------------|
 |  XGBoost Regressor |    792.24 +/- 124.6    |       0.11 +/- 0.01       | 1156.23 +/- 186.87  |
-
-------
 
 ## 5. Resultados financeiros para o negócio
 
@@ -168,17 +163,13 @@ A figura abaixo ilustra o desempenho geral do modelo.
 
     error_rate = prediction/sales
 
-<img src="https://github.com/pedroachagas/rossmann_webapp/blob/main/img/model_performance.png" width=70% height=70%/>
-
-------
+<img src="https://github.com/pedroachagas/rossmann_webapp/blob/main/img/model_performance.png" width=100% height=100%/>
 
 ## 6. Conclusão
 
 O objetivo do projeto foi alcançado, resolvendo não só o problema inicial de previsibilidade de faturamento do CFO, bem como melhorando a gestão financeira da Rossmann como um todo, trazendo consigo ganhos financeiros consideráveis para o negócio.
 
-O funcionamento da previsão de vendas via bot do Telegram pode ser visto aqui: 
-
-------
+O funcionamento da previsão de vendas via bot do Telegram pode ser visto aqui:
 
 ## 7. Próximos passos
 
@@ -187,7 +178,6 @@ Melhorias mapeadas:
 - Reavaliar o conjunto de parâmetros utilizados para maximizar o aprendizado do modelo, incluindo mais parâmetros na estratégia Random Search, e avaliando a viabilidade de uso da estratégia Bayesian Search.
 - Incluir além da previsão de vendas da loja atual no bot do Telegram, a previsão mais pessimista e a mais otimista. Exemplo: previsão para 6 semanas: R$ 200.000,00. Pessimista: R$ 186.000,00 (-7%). Otimista: R$ 214.000,00 (+7%).
 
-------
 ## 8 Referências
 
 - Este Projeto de Previsão de vendas é parte do curso "DS em Produção", da [Comunidade DS](https://www.comunidadedatascience.com/comunidade-ds/)
