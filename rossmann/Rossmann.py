@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import math
 import datetime
+from sklearn.metrics import mean_absolute_error
 
 class Rossmann( object ):
     def __init__( self ):
@@ -169,6 +170,10 @@ class Rossmann( object ):
         pred = model.predict( test_data )
         
         # join pred into the original data
+
         original_data['prediction'] = np.expm1( pred )
-        
-        return original_data.to_json( orient='records', date_format='iso' )
+        original_data['best_scenario'] = original_data['prediction']*1.11
+        original_data['worst_scenario'] = original_data['prediction']*0.89
+
+               
+        return original_data.to_json(orient='records', date_format = 'iso')
