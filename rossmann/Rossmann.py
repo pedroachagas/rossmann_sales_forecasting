@@ -14,7 +14,7 @@ class Rossmann( object ):
         self.promo_time_week_scaler        = pickle.load( open( self.home_path + 'parameter/promo_time_week_scaler.pkl', 'rb') )
         self.year_scaler                   = pickle.load( open( self.home_path + 'parameter/year_scaler.pkl', 'rb') )
         self.store_type_scaler             = pickle.load( open( self.home_path + 'parameter/store_type_scaler.pkl', 'rb') )
-        
+        self.error_table                   = pd.read_csv('data/error_table.csv') 
         
     def data_cleaning( self, df1 ): 
         
@@ -172,7 +172,10 @@ class Rossmann( object ):
         # join pred into the original data
 
         original_data['prediction'] = np.expm1( pred )
-        original_data['best_scenario'] = original_data['prediction']*1.11
-        original_data['worst_scenario'] = original_data['prediction']*0.89
 
-        return original_data.to_json(orient='records', date_format = 'iso')
+        df = pd.merge(original_data, self.error_table, on='store', how='left')
+
+        df['best_scenario'] = df['prediction'] + df['MAE']
+        df['worst_scenario'] = df['prediction'] - df['MAE']
+
+        return df.to_json(orient='records', date_format = 'iso')
