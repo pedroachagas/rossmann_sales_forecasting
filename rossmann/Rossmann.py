@@ -175,5 +175,4 @@ class Rossmann( object ):
         original_data['best_scenario'] = original_data['prediction']*1.11
         original_data['worst_scenario'] = original_data['prediction']*0.89
 
-               
         return original_data.to_json(orient='records', date_format = 'iso')
