@@ -1,6 +1,6 @@
 # Previsão de vendas de rede farmacêutica
 
-<img src="https://github.com/nortonvanz/Pharmacy-Sales-Forecast/blob/main/img/rossmann_sales_prediction_img.jpg?raw=true" width=70% height=70%/>
+<img src="https://github.com/pedroachagas/rossmann_webapp/blob/main/img/logo.png" width=70% height=70%/>
 
 ### Contextualização:
 A Rossmann é uma das maiores redes de farmácias da Europa, possuindo mais de 4.000 lojas, e 56 mil colaboradores até 2020.
@@ -91,7 +91,9 @@ Quais ferramentas serão usadas no processo?
 
 #### 3.3.1 Estratégia de solução
 
-A estratégia utilizada na resolução do problema, baseado:
+<img src="https://github.com/pedroachagas/rossmann_webapp/blob/main/img/crisp.png" width=70% height=70%/>
+
+A estratégia utilizada na resolução do problema, baseada:
 
 **Passo 1 -** Compreender com clareza o modelo e o problema de negócios, através da estatística descritiva;
 
@@ -158,11 +160,15 @@ Apesar do Random Forest ter tido um desempenho ligeiramente superior, o modelo e
 
 As previsões de vendas da Rossmann eram, até antes deste projeto, realizadas por meio de planilhas de histórico de venda, através de uma média móvel. A taxa de erros da previsão de vendas de toda a rede ficava na média de 36%, chegando a até 60% nas lojas mais recentes.
 
-Após a implementação deste modelo de previsão de vendas, a taxa de erro média das previsões em toda a rede passou para 4,65% em média.
+Após a implementação deste modelo de previsão de vendas, a taxa de erro média das previsões em toda a rede passou para 11%.
 
-Essa redução do erro de mais de 31% em média na previsão de vendas da rede se traduziu na melhoria na gestão financeira da empresa, assim como permitiu que o CF0 
+A figura abaixo ilustra o desempenho geral do modelo.
 
+    error = sales - predictions
 
+    error_rate = prediction/sales
+
+<img src="https://github.com/pedroachagas/rossmann_webapp/blob/main/img/model_performance.png" width=70% height=70%/>
 
 ------
 
@@ -170,7 +176,7 @@ Essa redução do erro de mais de 31% em média na previsão de vendas da rede s
 
 O objetivo do projeto foi alcançado, resolvendo não só o problema inicial de previsibilidade de faturamento do CFO, bem como melhorando a gestão financeira da Rossmann como um todo, trazendo consigo ganhos financeiros consideráveis para o negócio.
 
-O funcionamento da previsão de vendas via bot do Telegram pode ser visto aqui: [Youtube](https://www.youtube.com/shorts/XsvRzYXMBL4)
+O funcionamento da previsão de vendas via bot do Telegram pode ser visto aqui: 
 
 ------
 
