@@ -12,7 +12,6 @@ Foram disponibilizados 1.017.209 registros de vendas, contendo 18 característic
 
 O contexto de negócios é fictício, porém descreve um problema real de uma grande varejista: prever com assertividade suas vendas.
 
-
 ## 1. Problema de negócios
 
 ### 1.1 Problema
@@ -23,7 +22,6 @@ Em uma reunião mensal de resultados da Rossmann, o CFO solicitou aos gerentes d
 
 - Criar um modelo de machine learning capaz de fornecer previsões de venda para as próximas 6 semanas de cada uma das lojas da rede.
 - Desenvolver uma interface pela qual o CFO possa interagir com o modelo, solicitando de qual das lojas deseja prever as vendas.
-
 
 ## 2. Premissas de negócio
 
@@ -63,7 +61,6 @@ Variável | Definição
 |promo2_since | data desde que a Promo2 está ativa. |
 |promo2_time_week | números de semanas em que a Promo2 ficou ativa. |
 
-
 ## 3. Planejamento da solução
 
 ### 3.1. Produto final
@@ -76,14 +73,14 @@ O que será entregue efetivamente?
 
 Quais ferramentas serão usadas no processo?
 
-- Python 3.8.12;
+- Python 3.10;
 - Jupyter Notebook;
 - Git e Github;
 - Heroku Cloud;
 - Algoritmos de Classificação e Regressão;
 - Pacotes de Machine Learning Sklearn e Scipy;
-- Técnicas de Seleção de Atributos e Redução de Dimensionalidade
-- Flask e Python API's
+- Técnicas de Seleção de Atributos e Redução de Dimensionalidade;
+- Flask e Python API's.
 
 ### 3.3 Processo
 
@@ -91,7 +88,7 @@ Quais ferramentas serão usadas no processo?
 
 <img src="https://github.com/pedroachagas/rossmann_webapp/blob/main/img/crisp.png" width=100% height=100%/>
 
-A estratégia utilizada na resolução do problema, baseada:
+A estratégia utilizada na resolução do problema, baseada na metodologia CRISP-DM (ilustrada na imagem acima):
 
 **Passo 1 -** Compreender com clareza o modelo e o problema de negócios, através da estatística descritiva;
 
@@ -164,7 +161,7 @@ A figura abaixo ilustra o desempenho geral do modelo.
 
 ## 6. Implementação do modelo em produção
 
-O modelo foi finalmente colocado em produção e operado através de um chatbot do Telegram. Para isto, além do modelo final treinado, foi criada uma classe em python com todo o pipeline de processamento de dados, um manipulador de API e uma aplicação para gerenciar as mensagens. Todos os arquivos foram hospedados no Heroku (https://www.heroku.com/); os dados de produção também foram armazenados na nuvem do Heroku.
+O modelo foi finalmente colocado em produção e operado através de um chatbot do Telegram. Para isto, além do modelo final treinado, foi criada uma classe em python com todo o pipeline de processamento de dados, um manipulador de API e uma aplicação para gerenciar as mensagens. Todos os arquivos foram hospedados no Heroku (<https://www.heroku.com/>); os dados de produção também foram armazenados na nuvem do Heroku.
 
 <img src="https://github.com/pedroachagas/rossmann_webapp/blob/main/img/app.png" width=100% height=100%/>
 
