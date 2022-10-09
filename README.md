@@ -65,7 +65,6 @@ Variável | Definição
 |promo2_since | data desde que a Promo2 está ativa. |
 |promo2_time_week | números de semanas em que a Promo2 ficou ativa. |
 
-------
 
 ## 3. Planejamento da solução
 
