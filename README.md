@@ -1,6 +1,6 @@
 # Previsão de vendas de rede farmacêutica
 
-<img src="https://github.com/pedroachagas/rossmann_webapp/blob/main/img/logo.png" width=70% height=70%/>
+<img src="https://github.com/pedroachagas/rossmann_webapp/blob/main/img/rossmann.jpg=70% height=70%/>
 
 ## Contextualização
 
@@ -165,22 +165,28 @@ A figura abaixo ilustra o desempenho geral do modelo.
 
 <img src="https://github.com/pedroachagas/rossmann_webapp/blob/main/img/model_performance.png" width=100% height=100%/>
 
-## 6. Conclusão
+## 6. Implementação do modelo em produção
+
+O modelo foi finalmente colocado em produção e operado através de um chatbot do Telegram. Para isto, além do modelo final treinado, foi criada uma classe em python com todo o pipeline de processamento de dados, um manipulador de API e uma aplicação para gerenciar as mensagens. Todos os arquivos foram hospedados no Heroku (https://www.heroku.com/); os dados de produção também foram armazenados na nuvem do Heroku.
+
+<img src="https://github.com/pedroachagas/rossmann_webapp/blob/main/img/app.png" width=100% height=100%/>
+
+## 7. Conclusão
 
 O objetivo do projeto foi alcançado, resolvendo não só o problema inicial de previsibilidade de faturamento do CFO, bem como melhorando a gestão financeira da Rossmann como um todo, trazendo consigo ganhos financeiros consideráveis para o negócio.
 
-O funcionamento da previsão de vendas via bot do Telegram pode ser visto aqui:
+O funcionamento da previsão de vendas via bot do Telegram pode ser visto no gif abaixo:
 
-## 7. Próximos passos
+<img src="https://github.com/pedroachagas/rossmann_webapp/blob/main/img/telegram_bot.gif" width=100% height=100%/>
 
-Melhorias mapeadas:
+Para utilizar o bot clique [aqui](http://t.me/RossmannSalesPredBot)
+
+## 8. Próximos passos
 
 - Reavaliar o conjunto de parâmetros utilizados para maximizar o aprendizado do modelo, incluindo mais parâmetros na estratégia Random Search, e avaliando a viabilidade de uso da estratégia Bayesian Search.
-- Incluir além da previsão de vendas da loja atual no bot do Telegram, a previsão mais pessimista e a mais otimista. Exemplo: previsão para 6 semanas: R$ 200.000,00. Pessimista: R$ 186.000,00 (-7%). Otimista: R$ 214.000,00 (+7%).
 
-## 8 Referências
+## 9. Referências
 
 - Este Projeto de Previsão de vendas é parte do curso "DS em Produção", da [Comunidade DS](https://www.comunidadedatascience.com/comunidade-ds/)
-
 - O Dataset foi obtido no [Kaggle](https://www.kaggle.com/c/rossmann-store-sales)
 - A imagem utilizada é de uso livre e foi obtida no [Pexels](https://www.pexels.com/pt-br/foto/mulher-adulta-elegante-usando-smartphone-na-rua-3774903/)
