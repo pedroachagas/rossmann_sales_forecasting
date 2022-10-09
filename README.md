@@ -12,7 +12,6 @@ Foram disponibilizados 1.017.209 registros de vendas, contendo 18 característic
 
 O contexto de negócios é fictício, porém descreve um problema real de uma grande varejista: prever com assertividade suas vendas.
 
-------
 
 ## 1. Problema de negócios
 
@@ -25,7 +24,6 @@ Em uma reunião mensal de resultados da Rossmann, o CFO solicitou aos gerentes d
 - Criar um modelo de machine learning capaz de fornecer previsões de venda para as próximas 6 semanas de cada uma das lojas da rede.
 - Desenvolver uma interface pela qual o CFO possa interagir com o modelo, solicitando de qual das lojas deseja prever as vendas.
 
-------
 
 ## 2. Premissas de negócio
 
