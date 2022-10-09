@@ -1,6 +1,6 @@
 # Previsão de vendas de rede farmacêutica
 
-<img src="https://github.com/pedroachagas/rossmann_webapp/blob/main/img/rossmann.jpg=70% height=70%/>
+<img src="https://github.com/pedroachagas/rossmann_webapp/blob/main/img/rossmann.jpg" width=70% height=70%/>
 
 ## Contextualização
 
