@@ -171,7 +171,7 @@ O objetivo do projeto foi alcançado, resolvendo não só o problema inicial de 
 
 O funcionamento da previsão de vendas via bot do Telegram pode ser visto no gif abaixo:
 
-<img src="https://github.com/pedroachagas/rossmann_webapp/blob/main/img/telegram_bot.gif" width=50% height=50%/>
+<img src="https://github.com/pedroachagas/rossmann_webapp/blob/main/img/telegram_bot.gif" width=30% height=30%/>
 
 Para utilizar o bot clique [aqui](http://t.me/RossmannSalesPredBot)
 
